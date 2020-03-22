@@ -170,7 +170,29 @@ router is commented as it has its own ssample code. Please refer my angular-rout
   height: 100%;
   }
 ```
-8. Install bootstrap and bootswatch using the following line of commands:
+8. Open login.component.html file and add the folowing line of HTML code
+```
+  <div   class=" container shadoweddiv col-6">
+  <form   #loginForm="ngForm"   (ngSubmit)="login()">
+
+      <label>User Name </label>
+      <input class="form-control mr-sm-2" name="username" type="text"
+      placeholder="Username" required [(ngModel)]="model.username" >
+      <br>
+     <label>Password</label>
+      <input class="form-control mr-sm-2" name="passord" type="password"
+      placeholder="Password" required  [(ngModel)]="model.password" >
+      <hr>
+      <button [disabled]="!loginForm.valid"
+              class="btn btn-success my-2 my-sm-0"
+              type="submit">Login</button>
+
+    </form>
+  </div>
+
+```
+
+9. Install bootstrap and bootswatch using the following line of commands:
 
 ```
   npm install bootstrap
@@ -178,12 +200,12 @@ router is commented as it has its own ssample code. Please refer my angular-rout
 
 ```
 
-9.  Open styles.css and add the following line of code:
+10.  Open styles.css and add the following line of code:
 ```
   @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
   @import '../node_modules/bootswatch/dist/journal/bootstrap.min.css';
 ```  
-10.
+11.
 
 ### Build and run the  Application
 
